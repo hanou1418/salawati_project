@@ -1,0 +1,71 @@
+/*/////////////////////////////////////// RESPONSIVE //////////////////////////////////////////////////////*/
+
+@media (max-width: 480px) {
+    body {
+        background-attachment: scroll; 
+        background-position: top center;
+    }
+    nav#hider {
+        padding: 8px 12px;  
+        background: var(--couleur-bcg_noir);
+        gap: 6px;           
+        
+        /* Hauteur fixe optionnelle pour encore plus petit */
+        min-height: 44px;
+        
+        font-size: 2rem;
+    }
+    #container {
+        width: calc(100% - 30px); /* يترك 15px من اليمين و 15px من اليسار */
+        margin: 20px auto;        /* يضمن التوسط مع مسافة علوية */
+        padding: 20px 15px;       /* مسافة داخلية مريحة */
+        box-sizing: border-box;   /* يضمن عدم خروج الحاوية عن العرض المطلوب */
+        backdrop-filter: none;
+        /* حل مشكلة الوضوح: تعتيم الخلفية بدلاً من الـ blur المشوه */
+        background: rgba(0, 0, 0, 0.6) !important;
+        -webkit-backdrop-filter: blur(10px);
+    }  
+    /* تحسين الجدول ليظل ضمن الحدود */
+    .prayer-table {
+        font-size: 0.9rem;
+    }   
+    .prayer-table th, 
+    .prayer-table td {
+        padding: 12px 5px;
+    }
+    .title-section {
+        gap: 10px;
+    }
+    .main-title{
+        font-size: 2.5rem; /* حجم كبير ليظهر جمال الزخرفة */
+    }
+    .next-prayer-label{
+        font-size: 0.55rem;
+    }
+    .next-prayer-name {
+        font-size: 0.50rem;
+    }
+    .next-prayer-countdown {
+        font-size: 0.50rem;
+    }
+    .next-prayer-timer{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.7);
+        border: 2px solid var(--dahabi);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        margin-bottom: 15px;
+        top: 10%;
+    }
+    #titr{
+        display:flex;
+        justify-content: space-evenly;
+        position: relative;
+    }
+}

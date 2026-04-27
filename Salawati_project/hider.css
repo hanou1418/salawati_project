@@ -1,0 +1,41 @@
+nav#hider {
+    width: 100%;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    
+    /* Couleur plus compatible : dégradé bleu/violet soft */
+    background:var(--couleur-bcg_noir);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    
+    display: flex;
+    justify-content: flex-start;  /* liens à droite */
+    gap: 20px;
+    position: sticky;           /* reste collé en haut au scroll */
+    top: 0;
+    z-index: 100;
+}
+
+nav#hider a {
+    color: var(--couleur-blanc);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 6px 12px;
+    transition: 0.3s ease;
+}
+
+nav#hider a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.titels{
+    text-decoration: none;
+    font-family: 'Scheherazade New', 'Amiri', serif !important;
+    font-size: 1rem !important;
+    letter-spacing: 4px !important;
+    color: #ffffff !important;
+    justify-content: center !important;
+    border-bottom: 1px solid transparent;
+    text-shadow: 2px 2px 4px rgba(67, 66, 66, 0.7) !important;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>S Λ L Λ W Λ T I</title>
+    <link rel="icon" href="./images/wired-gradient-1923-mosque-hover-pinch.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- VUEJS CDN / axios cdn / script /dayjs-->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js" crossorigin></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" crossorigin></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="./index.js" defer></script>
+    <!-- les css -->
+    <link rel="stylesheet" href="./cssVar.css">
+    <link rel="icon" href="data:,">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./hider.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+<body id="app">
+    <nav id="hider">
+        <lord-icon id="ico_in" src="https://cdn.lordicon.com/qvaikltw.json" trigger="loop" delay="3000" colors="primary:#ffffff,secondary:#d68d40"></lord-icon>
+        <span id="nav-title">﴿  صَـــــلَوَٰتِـــــــــي  ﴾</span>
+    </nav>
+    <div id="container">
+        <div id="main-loader" class="skeleton-container">
+            <div class="skeleton-date"></div>
+            <div class="skeleton-row"></div>
+            <div class="skeleton-title"></div>
+            <div class="skeleton-location"></div>
+            <div class="skeleton-row"></div>
+            <div class="skeleton-row"></div>
+            <div class="skeleton-row"></div>
+            <div class="skeleton-row"></div>
+            <div class="skeleton-row"></div>
+        </div>
+        <div id="mincontainer" style="display: none;">
+            <div id="titr">
+                <h1 class="main-title">مَوَاقِيتُ الصَّلَاةِ</h1>
+                <div id="next-prayer-timer" class="next-prayer-timer">
+                    <div class="next-prayer-label">الصلاة التالية</div>
+                    <div class="next-prayer-name" id="nextPrayerName">--</div>
+                    <div class="next-prayer-countdown" id="nextPrayerCountdown">--:--:--</div>
+                </div>
+            </div>
+            <div class="date-info">
+                <span id="arb_day"></span> <span id="month_arb"></span> <span id="arb_year"></span> م ،
+                الموافق لـ
+                <span id="month_higri_nbr"></span> <span id="month_higri_letre"></span> <span id="year_hijri"></span> هـ
+            </div>
+            <div class="location-sun-info">
+                <h2 class="city">مدينة الجزائر</h2>
+                <div class="sun-times">
+                    <div class="sun-item">
+                        <span class="material-symbols-outlined">wb_twilight</span>
+                        <div> الشروق : <span id="sunrise"></span></div>
+                    </div>
+                    <span class="separator">|</span>
+                    <div class="sun-item">
+                        <span class="material-symbols-outlined">nights_stay</span>
+                        <div>الغروب : <span id="sunset"></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <table class="prayer-table">
+                <thead>
+                    <tr>
+                        <th>الصلاة</th>
+                        <th>اليوم</th>
+                        <th>غداً</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>الفجر</td><td id="fajr_today"></td><td id="fajr_tomorrow"></td></tr>
+                    <tr><td>الظهر</td><td id="dhuhr_today"></td><td id="dhuhr_tomorrow"></td></tr>
+                    <tr><td>العصر</td><td id="asr_today"></td><td id="asr_tomorrow"></td></tr>
+                    <tr><td>المغرب</td><td id="maghrib_today"></td><td id="maghrib_tomorrow"></td></tr>
+                    <tr><td>العشاء</td><td id="isha_today"></td><td id="isha_tomorrow"></td></tr>
+                    <tr class="highlight"><td>الثلث الأخير</td><td id="lastthird_today"></td><td id="lastthird_tomorrow"></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>

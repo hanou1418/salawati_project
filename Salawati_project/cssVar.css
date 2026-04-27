@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa+Ink:wght@700&family=Aref+Ruqaa:wght@400;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&family=Reem+Kufi:wght@400;700&family=Scheherazade+New:wght@400;700&family=Vibes&display=swap');
+
+:root {
+    --couleur-bcg_noir:linear-gradient(135deg,#d68d40b5,rgba(0, 0, 0, 0.6));
+    --couleur-bcg_blanc: linear-gradient(135deg,#d68d40b5,rgba(255, 255, 255, 0.15));
+    --couleur-noir:rgba(0, 0, 0, 0.6);
+    --couleur-blanc:rgb(255, 255, 255);
+    --dahabi:#d68d40;
+}

@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;   /* header en haut, contenu en dessous */
+    align-items: center;
+    background-image: url("./images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    direction: rtl;
+}
+
+
+/* CONTENEUR GLOBAL CENTRÉ */
+#container {
+    margin-top: 40px; /* espace sous le header */
+    margin-bottom: 40px;
+    /*backdrop-filter: blur(10px);*/
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 700px;
+    padding: 25px 20px;
+    color: var(--couleur-blanc);
+    text-align: center;
+    /*si je veut la couleur sombre*/
+    backdrop-filter: none;
+    /* حل مشكلة الوضوح: تعتيم الخلفية بدلاً من الـ blur المشوه */
+    background: rgba(0, 0, 0, 0.6) !important;
+    -webkit-backdrop-filter: blur(10px);
+    
+}
+
+/* CONTENU INTERNE */
+#mincontainer {
+    width: 100%;
+}
+
+.title-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.main-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-family: 'Scheherazade New', 'Amiri', serif !important;
+    font-size: 4rem; /* حجم كبير ليظهر جمال الزخرفة */
+    color: var(--dahabi); /* لون ذهبي ليناسب الطابع الإسلامي */
+    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.25);; /* ظل لإبراز الحروف المزخرفة */
+    
+}
+#nav-title{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-family: 'Scheherazade New', 'Amiri', serif !important;
+    font-size: 1.5rem; /* حجم كبير ليظهر جمال الزخرفة */
+    color: var(--dahabi); /* لون ذهبي ليناسب الطابع الإسلامي */
+    text-shadow: 2px 2px 4px rgba(255, 217, 0, 0.452); /* ظل لإبراز الحروف المزخرفة */
+    
+}
+.next-prayer-timer {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--dahabi);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    left: 0%;
+    top: 15%;
+}
+
+.next-prayer-label {
+    font-size: 0.7rem;
+    color: #f5f5f5;
+    margin-bottom: 2px;
+    line-height: 1;
+}
+
+.next-prayer-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--dahabi);
+    margin-bottom: 2px;
+    line-height: 1;
+}
+
+.next-prayer-countdown {
+    font-size: 0.7rem;
+    font-weight: 700;
+    direction: ltr;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+
+#titr{
+    display:flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--dahabi);
+    position: relative;
+}
+
+.date-info {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.location-sun-info {
+    margin-bottom: 25px;
+}
+
+.city {
+    margin: 0 0 8px 0;
+    font-family: 'Scheherazade New', 'Amiri', serif !important;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.sun-times {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.sun-times {
+    display: flex;
+    align-items: center;    /* هذا السطر هو السر في محاذاة الأيقونة مع النص عمودياً */
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.1rem;
+}
+
+/* تنسيق كل جزء (أيقونة + نص) */
+.sun-item {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* مسافة صغيرة بين الأيقونة والنص */
+}
+
+/* لضبط حجم الأيقونات وتألقها */
+.material-symbols-outlined {
+    font-size: 24px; /* يمكنك تكبيرها أو تصغيرها من هنا */
+    color: #ffd700;  /* اللون الذهبي */
+    vertical-align: middle;
+}
+
+/* TABLE DES PRIÈRES */
+.prayer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.prayer-table th,
+.prayer-table td {
+    padding: 12px 10px;
+    text-align: center;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.prayer-table th {
+    background: rgba(255, 255, 255, 0.18);
+    font-weight: 500;
+}
+
+.prayer-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transition: 0.2s ease;
+}
+
+.prayer-table .highlight {
+    background: rgba(255, 215, 0, 0.25);
+    font-weight: 600;
+}
+.active-title {
+    border-radius:0px !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 5px !important;
+    border-bottom: 1px solid var(--couleur-blanc);
+    color: var(--couleur-blanc) !important;}
+
+/* --- Base de l'animation --- */
+/* تأثير لمعان التحميل */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.skeleton-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.skeleton-container > div {
+    /* تدرج شفاف يتناسب مع الصورة الخلفية */
+    background: linear-gradient(90deg, 
+        rgba(255, 255, 255, 0.05) 25%, 
+        rgba(255, 255, 255, 0.15) 50%, 
+        rgba(255, 255, 255, 0.05) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* أحجام العناصر الوهمية */
+.skeleton-title {
+    width: 70%;
+    height: 60px;
+    margin-bottom: 25px !important;
+}
+
+.skeleton-date {
+    width: 90%;
+    height: 25px;
+}
+
+.skeleton-location {
+    width: 40%;
+    height: 35px;
+    margin: 20px 0 !important;
+}
+
+.skeleton-row {
+    width: 100%;
+    height: 45px;
+}
+
+h1{
+    display: inline;
+}
+
+/*********************************************************************************/
+/*******************************************************************************************/
+
